@@ -9,18 +9,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-import Projeto_ClienteDAO.ClienteDAO;
-import Projeto_ClienteDAO.ContaDAO;
-import Projeto_Salva_Dados_textField_Cadastro.Cliente_add;
 
 public class Cad_Cliente extends javax.swing.JPanel {
 
     
 	private static final long serialVersionUID = 1L;
 	public Cad_Cliente() throws SQLException {
-    	clienteDAO = new ClienteDAO();
-    	cliente_add = new Cliente_add();
-    	contaDAO = new ContaDAO();
+
         initComponents();
     }
 
@@ -154,41 +149,13 @@ public class Cad_Cliente extends javax.swing.JPanel {
         		 );
             
             
-            //Action Button
-            CancelButton.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					Clear_cad();
-				}
-			});
-            
-            SaveButton.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					//Verifica_Cpf();
-					Cad_Cliente();
-				}
-			});
+           
     }     
     
     
     private void Cad_Cliente() {
     	
-    	if(Validate_Cad()) {
-    	Cliente_add Cliente = new Cliente_add();
-    	Cliente.setNome(NomeTextField.getText());
-    	Cliente.setCpf(CpfTextField.getText());
-    	Cliente.setCell(CellTextField.getText());
-    	Cliente.setEndereço(EndereçoTextField.getText());
-    	Cliente.setRg(RgTextField.getText());
-    	Cliente.setLimite(Double.valueOf( LimiteTextField.getText()));
-    	clienteDAO.save(Cliente);
-    		
-    	Clear_cad();
-    	JOptionPane.showMessageDialog(this,Cliente.getNome() + " foi cadastrado"
-    			+ " com sucesso! \n Verifique na tabela abaixo !","Cadastro concluido",JOptionPane.INFORMATION_MESSAGE);
-    	Up_Data_Table();
-    	}
+    	
     }
     
     private boolean Validate_Cad() {
@@ -223,27 +190,7 @@ public class Cad_Cliente extends javax.swing.JPanel {
 			LimiteTextField.requestFocus();
 			return false;
     	}
-    	for(Cliente_add cliente_msm_nome : clienteDAO.getAll()) {
-    		if(NomeTextField.getText().equals(cliente_msm_nome.getNome())) {
-    			JOptionPane.showMessageDialog(this, "Nome de usuario cadastrado\nDigite o sobrenome", "Cadastrado", JOptionPane.WARNING_MESSAGE);
-    			NomeTextField.requestFocus();
-    			return false;
-    		}
-    	}
-    	for(Cliente_add cliente_msm_Cpf : clienteDAO.getAll()) {
-    		if(CpfTextField.getText().equals(cliente_msm_Cpf.getCpf())) {
-    			JOptionPane.showMessageDialog(this, "CPF ja usado", "Cadastrado", JOptionPane.WARNING_MESSAGE);
-    			CpfTextField.requestFocus();
-    			return false;
-    		}
-    	}
-    	for(Cliente_add cliente_msm_Cell : clienteDAO.getAll()) {
-    		if(CellTextField.getText().equals(cliente_msm_Cell.getCell())) {
-    			JOptionPane.showMessageDialog(this, "Nº de Telefone ja usado", "Cadastrado", JOptionPane.WARNING_MESSAGE);
-    			CellTextField.requestFocus();
-    			return false;
-    		}
-    	}
+    	
     	return true;
     }
     
@@ -260,17 +207,7 @@ public class Cad_Cliente extends javax.swing.JPanel {
     	DefaultTableModel tablemodel_Cadastrados = (DefaultTableModel) jTable1.getModel();
     	tablemodel_Cadastrados.setRowCount(0);
     	
-    	for(Cliente_add cliente : clienteDAO.getAll()){
-    	Object[] data = {
-				cliente.getNome(),
-				cliente.getCpf(),
-				cliente.getCell(),
-				cliente.getLimite()
-		};
     	
-		tablemodel_Cadastrados.addRow(data);
-		
-    	}
     	
     }
     
@@ -291,8 +228,6 @@ public class Cad_Cliente extends javax.swing.JPanel {
     private javax.swing.JButton SaveButton;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;   
-    private ClienteDAO clienteDAO;
-    private Cliente_add cliente_add;
-    private ContaDAO contaDAO;
+
     
 }
