@@ -78,10 +78,10 @@ public class Tela_Entrada extends JFrame {
 		Menu_panel.add(Menu_Principal_Escrita,gbc);
 		
 
-		JButton Menu_Principal = new JButton("FINANÇAS");
+		JButton Menu_Principal = new JButton("FINANï¿½AS");
 		Menu_Principal.setBackground(Color.WHITE);
-		ImageIcon image6 = new ImageIcon(getClass().getResource("/informações.png"));
-		Menu_Principal.setIcon(image6);
+//		ImageIcon image6 = new ImageIcon(getClass().getResource("/informaï¿½ï¿½es.png"));
+//		Menu_Principal.setIcon(image6);
 		Menu_Principal.setPreferredSize(new Dimension(150, 35));
 		gbc.gridx=0;
 		gbc.gridy=1;
@@ -144,10 +144,10 @@ public class Tela_Entrada extends JFrame {
 		Menu_panel.add(Marcar_Button,gbc);
 		//---------------------------------------------------------------------------
 		
-		JLabel Menu_Espaço = new JLabel("Relatório");
-		Menu_Espaço.setFont(new Font("Times Row Name", Font.ITALIC, 19));
+		JLabel Menu_Espaco = new JLabel("Relatï¿½rio");
+		Menu_Espaco.setFont(new Font("Times Row Name", Font.ITALIC, 19));
 		gbc.gridy=4;
-		Menu_panel.add(Menu_Espaço,gbc);
+		Menu_panel.add(Menu_Espaco,gbc);
 		//---------------------------------------------------------------------------
 		
 		JButton Relatorio_Diario_Button = new JButton("Vendas");
@@ -196,7 +196,7 @@ public class Tela_Entrada extends JFrame {
 		});
 		Menu_panel.add(Ver_cadastros,gbc);
 		
-		JLabel Menu_Versao = new JLabel("Versão 1.0.3");
+		JLabel Menu_Versao = new JLabel("Versï¿½o 1.0.3");
 		Menu_Versao.setFont(new Font("Times Row Name", Font.CENTER_BASELINE, 10));
 		gbc.gridy=9;
 		Menu_panel.add(Menu_Versao,gbc);

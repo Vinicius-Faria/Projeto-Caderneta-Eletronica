@@ -26,13 +26,13 @@ public class Cad_Cliente extends javax.swing.JPanel {
         NomeLabel = new javax.swing.JLabel("Nome");
         CpfLabel = new javax.swing.JLabel("Cpf");
         RgLabel = new javax.swing.JLabel("Rg");
-        EndereçoLabel = new javax.swing.JLabel("Endereço");
+        EnderecoLabel = new javax.swing.JLabel("Endereï¿½o");
         CellLabel = new javax.swing.JLabel("Cell");
         LimiteLabel = new javax.swing.JLabel("Limite");
         NomeTextField = new java.awt.TextField();
         CpfTextField = new java.awt.TextField();
         RgTextField = new java.awt.TextField();
-        EndereçoTextField = new java.awt.TextField();
+        EnderecoTextField = new java.awt.TextField();
         CellTextField = new java.awt.TextField();
         LimiteTextField = new java.awt.TextField();
         CancelButton = new javax.swing.JButton("Cancelar");	
@@ -45,12 +45,12 @@ public class Cad_Cliente extends javax.swing.JPanel {
         CpfLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CpfLabel.setToolTipText("");
         RgLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        EndereçoLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        EnderecoLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CellLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         LimiteLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         RecemAddLabel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         
-        //Coloca as especificações nos campos da tabela
+        //Coloca as especificaï¿½ï¿½es nos campos da tabela
         Vector<String> columnNames = new Vector<String>();
 		columnNames.add("Nome");
 		columnNames.add("Cpf");
@@ -84,9 +84,9 @@ public class Cad_Cliente extends javax.swing.JPanel {
                                     .addComponent(CancelButton)))
                             .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(EndereçoLabel)
+                            .addComponent(EnderecoLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(EndereçoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(EnderecoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(CellLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -128,8 +128,8 @@ public class Cad_Cliente extends javax.swing.JPanel {
                                             .addComponent(RgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addComponent(CpfTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(EndereçoLabel))
-                        .addComponent(EndereçoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(EnderecoLabel))
+                        .addComponent(EnderecoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -175,9 +175,9 @@ public class Cad_Cliente extends javax.swing.JPanel {
 			RgTextField.requestFocus();
 			return false;
     	}
-    	if (EndereçoTextField.getText() == null || EndereçoTextField.getText().trim().isEmpty()) {
-			JOptionPane.showMessageDialog(this, "Por favor, preencha o Endereço", "Campo vazio", JOptionPane.WARNING_MESSAGE);
-			EndereçoTextField.requestFocus();
+    	if (EnderecoTextField.getText() == null || EnderecoTextField.getText().trim().isEmpty()) {
+			JOptionPane.showMessageDialog(this, "Por favor, preencha o Endereï¿½o", "Campo vazio", JOptionPane.WARNING_MESSAGE);
+			EnderecoTextField.requestFocus();
 			return false;
     	}
     	if (CellTextField.getText() == null || CellTextField.getText().trim().isEmpty()) {
@@ -198,7 +198,7 @@ public class Cad_Cliente extends javax.swing.JPanel {
     	NomeTextField.setText(null);
     	CpfTextField.setText(null);
     	RgTextField.setText(null);
-    	EndereçoTextField.setText(null);
+    	EnderecoTextField.setText(null);
     	CellTextField.setText(null);
     	LimiteTextField.setText(null);
     }
@@ -216,8 +216,8 @@ public class Cad_Cliente extends javax.swing.JPanel {
     private java.awt.TextField CellTextField;
     private javax.swing.JLabel CpfLabel;
     private java.awt.TextField CpfTextField;
-    private javax.swing.JLabel EndereçoLabel;
-    private java.awt.TextField EndereçoTextField;
+    private javax.swing.JLabel EnderecoLabel;
+    private java.awt.TextField EnderecoTextField;
     private javax.swing.JLabel LimiteLabel;
     private java.awt.TextField LimiteTextField;
     private javax.swing.JLabel NomeLabel;

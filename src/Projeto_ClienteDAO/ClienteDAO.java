@@ -23,14 +23,11 @@ package Projeto_ClienteDAO;
 //	
 //}
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import Projeto_Salva_Dados_textField_Cadastro.Cliente_add;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import Projeto_Salva_Dados_textField_Cadastro.Cliente_add;
 
 
 public class ClienteDAO {
@@ -51,7 +48,7 @@ public class ClienteDAO {
 			statement.setString(index++, cliente.getNome());
 			statement.setString(index++, cliente.getCpf());
 			statement.setString(index++, cliente.getRg());
-			statement.setString(index++, cliente.getEndereço());
+			statement.setString(index++, cliente.getEndereco());
 			statement.setString(index++, cliente.getCell());
 			statement.setDouble(index++, cliente.getLimite());
 			statement.execute();
@@ -75,7 +72,7 @@ public class ClienteDAO {
 				cliente.setNome(result.getString("NOME"));
 				cliente.setCpf(result.getString("CPF"));
 				cliente.setRg(result.getString("RG"));
-				cliente.setEndereço(result.getString("ENDERECO"));
+				cliente.setEndereco(result.getString("ENDERECO"));
 				cliente.setCell(result.getString("CELL"));
 				cliente.setLimite(result.getDouble("LIMITE"));
 				clientes.add(cliente);
@@ -94,7 +91,7 @@ public class ClienteDAO {
 		String sql = "UPDATE CLIENTES"
 				+" SET NOME = '"+cliente.getNome()
 				+"',RG = '"+cliente.getRg()
-				+"',ENDERECO = '"+cliente.getEndereço()
+				+"',ENDERECO = '"+cliente.getEndereco()
 				+"',CELL = '"+cliente.getCell()
 				+"',LIMITE = '"+cliente.getLimite()
 				+"'WHERE CPF = '"+cliente.getCpf()

@@ -6,7 +6,7 @@ public class Cliente_add {
 	private String Cpf;
 	private String Rg;
 	private String Cell;
-	private String Endereço;
+	private String Endereco;
 	private Double Limite;
 	
 	
@@ -19,11 +19,11 @@ public class Cliente_add {
 	public void setRg(String rg) {
 		Rg = rg;
 	}
-	public String getEndereço() {
-		return Endereço;
+	public String getEndereco() {
+		return Endereco;
 	}
-	public void setEndereço(String endereço) {
-		Endereço = endereço;
+	public void setEndereco(String endereco) {
+		Endereco = endereco;
 	}
 	public void setLimite(Double string) {
 		Limite = string;

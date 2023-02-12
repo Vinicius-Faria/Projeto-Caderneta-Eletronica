@@ -42,7 +42,7 @@ public class Cadastros_Clientes extends javax.swing.JPanel {
         Cpf_textfield = new javax.swing.JTextField();
         Rg_label = new javax.swing.JLabel("Rg");
         Rg_textField = new javax.swing.JTextField();
-        En_Label = new javax.swing.JLabel("Endereço");
+        En_Label = new javax.swing.JLabel("Endereï¿½o");
         En_TextField = new javax.swing.JTextField();
         Cell_Label = new javax.swing.JLabel("Cell");
         Cell_textField = new javax.swing.JTextField();
@@ -51,7 +51,7 @@ public class Cadastros_Clientes extends javax.swing.JPanel {
         Edit_Button = new javax.swing.JButton("Editar");
         Excluir_Button = new javax.swing.JButton("Excluir");
         Salvar_Button = new javax.swing.JButton("Salvar");
-        jRadioButton1 = new javax.swing.JLabel("Contas exluidas serão apagadas o credito automaticamente !");
+        jRadioButton1 = new javax.swing.JLabel("Contas exluidas serï¿½o apagadas o credito automaticamente !");
       
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -178,7 +178,7 @@ public class Cadastros_Clientes extends javax.swing.JPanel {
     	Cliente.setNome(Nome_TextField.getText());
     	Cliente.setCpf(Cpf_textfield.getText());
     	Cliente.setCell(Cell_textField.getText());
-    	Cliente.setEndereço(En_TextField.getText());
+    	Cliente.setEndereco(En_TextField.getText());
     	Cliente.setRg(Rg_textField.getText());
     	Cliente.setLimite(Double.valueOf( Limite_textField.getText()));
 		clienteDAO.update(Cliente);
@@ -197,7 +197,7 @@ public class Cadastros_Clientes extends javax.swing.JPanel {
 				Nome_TextField.setText(cliente.getNome());
 				Cpf_textfield.setText(cliente.getCpf());
 				Rg_textField.setText(cliente.getRg());
-				En_TextField.setText(cliente.getEndereço());
+				En_TextField.setText(cliente.getEndereco());
 				Cell_textField.setText(cliente.getCell());
 				Limite_textField.setText(Double.toString(cliente.getLimite()));
 			}
